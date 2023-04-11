@@ -71,3 +71,11 @@ class Components(defaultdict[str, list[Component]]):
     @component_type_key
     def setdefault(self, key, default=None):
         return super().setdefault(key, default)
+
+class Status(Component):
+
+    __type__ = "status"
+
+    def __init__(self, owner):
+        super().__init__(owner)
+        self.hp = 0
