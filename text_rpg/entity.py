@@ -1,7 +1,7 @@
 
 from itertools import chain
 
-from text_rpg.component import Component, Components
+from text_rpg.component import Component, Components, Status
 
 class Entity:
     """  实体，游戏中实际存在的东西  """
@@ -33,6 +33,8 @@ class Entity:
 
 class Creature(Entity):
     """  生物  """
+
+    default_components = ( Status,  )
 
 class World(Entity):
     """  世界  """

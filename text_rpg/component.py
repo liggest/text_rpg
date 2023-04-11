@@ -4,6 +4,7 @@ class Component:
     """  组件  """
 
     __type__ = "base"
+    """  组件类型  """
 
     def __init__(self, owner):
         pass
@@ -76,6 +77,5 @@ class Status(Component):
 
     __type__ = "status"
 
-    def __init__(self, owner):
-        super().__init__(owner)
-        self.hp = 0
+    hp = 0
+    """  生命值  """
