@@ -6,6 +6,10 @@ class Component:
     __type__ = "base"
     """  组件类型  """
 
+    def __init_subclass__(cls):
+        if cls.__type__ is Component.__base__: # 未定义组件子类的 __type__
+            cls.__type__ = cls.__name__.lower().removesuffix("component")  # SubComponent => sub
+
     def __init__(self, owner):
         pass
 
